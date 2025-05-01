@@ -12,6 +12,8 @@ I am a second year Computer Science Ph.D. student at University of Southern Cali
 
 News
 ======
+* 05.2025 - Our paper [Balans: Multi-Armed Bandits-based Adaptive Large Neighborhood Search for Mixed-Integer Programming Problem](https://arxiv.org/pdf/2412.14382?) is accepted at IJCAI 2025!
+* 02.2025 - Our paper [Multi-task Representation Learning for Mixed Integer Linear Programming.](https://arxiv.org/pdf/2412.14409) is accepted at CPAIOR 2025!
 * 07.2024 - Our paper [Learning Backdoors for Mixed Integer Programs with Contrastive Learning.](https://arxiv.org/abs/2401.10467) is accepted at ECAI 2024!
 * 06.2024 - I start my internship at Fidelity Investments, advised by [Serdar Kadioglu](https://skadio.github.io)!
 * 01.2024 - Our paper [Optimization Over Trained Neural Networks: Taking a Relaxing Walk.](https://arxiv.org/abs/2401.03451) is accepted at CPAIOR 2024!
