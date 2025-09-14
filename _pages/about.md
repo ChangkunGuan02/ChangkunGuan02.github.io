@@ -12,7 +12,7 @@ I am a third year Computer Science Ph.D. student at University of Southern Calif
 
 News
 ======
-* 08.2025 - Our paper [Global Constraint LLM Agents for Text-to-Model Translation] is on arXiv!
+* 08.2025 - Our paper [Global Constraint LLM Agents for Text-to-Model Translation(https://arxiv.org/abs/2509.08970)] is on arXiv!
 * 08.2025 - Our paper [ParBalans: Parallel Multi-Armed Bandits-based Adaptive Large Neighborhood Search](https://arxiv.org/pdf/2508.06736) is on arXiv!
 * 08.2025 - Our paper [Neuro-Symbolic Acceleration of MILP Motion Planning with Temporal Logic and Chance Constraints](https://arxiv.org/pdf/2508.07515) is on arXiv!
 * 06.2025 - I start my internship again at Fidelity Investments, advised by [Serdar Kadioglu](https://skadio.github.io)!
