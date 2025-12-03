@@ -1,0 +1,124 @@
+/* Custom styling for enhanced buttons and backgrounds */
+
+/* Enhanced button styling */
+.btn-primary,
+button[type="submit"],
+a[class*="btn"] {
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+.btn-primary:hover,
+button[type="submit"]:hover,
+a[class*="btn"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3), 0 4px 6px -2px rgba(79, 70, 229, 0.2);
+}
+
+/* Biography section button enhancement */
+.biography-section .btn {
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  border: none;
+}
+
+.biography-section .btn:hover {
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+}
+
+/* Smooth background transitions */
+body {
+  transition: background-color 0.3s ease;
+}
+
+/* Enhanced card/section backgrounds */
+.card,
+section {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Banner overlay enhancement */
+.banner-overlay {
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.7) 0%, rgba(99, 102, 241, 0.5) 100%);
+}
+
+/* Avatar border enhancement */
+.avatar {
+  border: 4px solid #6366f1;
+  box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3), 0 4px 6px -2px rgba(79, 70, 229, 0.2);
+}
+
+/* Section spacing enhancement */
+section {
+  padding: 3rem 0;
+}
+
+/* Link hover effects */
+a:not(.btn):hover {
+  color: #6366f1;
+  transition: color 0.2s ease;
+}
+
+/* Skills section enhancement */
+.skills-section .skill-item {
+  transition: all 0.3s ease;
+}
+
+.skills-section .skill-item:hover {
+  transform: scale(1.05);
+}
+
+/* Award cards enhancement */
+.award-card {
+  transition: all 0.3s ease;
+  border-left: 4px solid #6366f1;
+}
+
+.award-card:hover {
+  border-left-color: #4f46e5;
+  box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.1);
+}
+
+/* Experience timeline enhancement */
+.timeline-item {
+  border-left: 3px solid #6366f1;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+  border-left-color: #4f46e5;
+  padding-left: 1rem;
+}
+
+/* Header enhancement */
+header {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.9) !important;
+}
+
+[data-theme="dark"] header {
+  background: rgba(15, 23, 42, 0.9) !important;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus states for accessibility */
+.btn:focus,
+button:focus,
+a:focus {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+
