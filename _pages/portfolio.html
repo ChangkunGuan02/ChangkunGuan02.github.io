@@ -120,8 +120,10 @@ svg.has-active .region-subactive.venn-lens { fill-opacity: 0.38; stroke-width: 2
   var hint = document.getElementById('venn-hint');
   var pinned = null;
 
-  // ML x OR is a subset of both parents: activating a parent field also
-  // includes the intersection papers (and partially lights the lens).
+  /* ML x OR is a subset of both parents: activating a parent field also
+     includes the intersection papers (and partially lights the lens).
+     NOTE: no double-slash comments in inline JS on this site - compress_html
+     collapses the page to one line and they would comment out the script. */
   function matches(cardArea, region) {
     if (cardArea === region) return true;
     return cardArea === 'mlxopt' && (region === 'optimization' || region === 'ml');
