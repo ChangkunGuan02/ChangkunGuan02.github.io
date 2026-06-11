@@ -12,6 +12,21 @@
         <img class="avatar-flip-front" src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" alt="{{ author.name }}">
         <img class="avatar-flip-back" src="{{ author.avatar_flip | prepend: "/images/" | prepend: base_path }}" alt="{{ author.name }}">
       </div>
+      <script>
+      /* Coin-flip avatar: each hover (or tap) rotates another half turn, so the
+         face alternates and persists until the next hover. No double-slash
+         comments here - compress_html collapses the page to one line. */
+      (function () {
+        var flips = document.querySelectorAll('.avatar-flip');
+        Array.prototype.forEach.call(flips, function (el) {
+          var turns = 0;
+          el.addEventListener('mouseenter', function () {
+            turns += 1;
+            el.style.transform = 'rotateY(' + (turns * 180) + 'deg)';
+          });
+        });
+      })();
+      </script>
     {% elsif author.avatar contains "://" %}
     	<img src="{{ author.avatar }}" alt="{{ author.name }}">
     {% else %}
