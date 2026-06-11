@@ -19,7 +19,9 @@ Education
 Research experience
 ------
 * **Graduate Researcher**, Georgia Institute of Technology — ISyE (2024–Present)
-  * Machine learning for operations research: deep learning-driven contextual stochastic optimization for real-time order fulfillment (NeurIPS ML&times;OR Workshop 2025)
+  * Proxy Benders Decomposition: replacing Benders subproblem optimization with certified optimization proxies that generate provably valid cuts (arXiv:2606.07403)
+  * Optimal Pareto-regret bounds for stochastic multi-objective multi-armed bandits (arXiv:2604.07096)
+  * Deep learning-driven contextual stochastic optimization for real-time order fulfillment (NeurIPS ML&times;OR Workshop 2025)
 
 * **Honors Thesis**, Bucknell University (2024)
   * *The Precedence-Constrained Quadratic Knapsack Problem* — developed exact and approximate solution methods, experimented with heuristics and metaheuristics, and generated difficult benchmark instances for this previously unstudied NP-hard problem

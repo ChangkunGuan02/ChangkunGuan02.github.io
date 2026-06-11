@@ -62,7 +62,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : "avatar.svg" # Open Graph/Twitter default site image
+og_image                 : "profile.jpg" # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -81,12 +81,12 @@ analytics:
 # Site Author
 author:
   name             : "Changkun Guan"
-  avatar           : "avatar.svg"
+  avatar           : "profile.jpg"
   bio              : "Ph.D. student in Operations Research at Georgia Tech's H. Milton Stewart School of Industrial and Systems Engineering (ISyE)."
   location         : "Atlanta, GA"
   employer         : "Georgia Institute of Technology"
   pubmed           :
-  googlescholar    :
+  googlescholar    : "https://scholar.google.com/citations?user=iMmlvAQAAAAJ"
   email            : "cguan62@gatech.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
