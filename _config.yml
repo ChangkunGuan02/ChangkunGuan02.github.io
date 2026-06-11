@@ -82,6 +82,7 @@ analytics:
 author:
   name             : "Changkun Guan"
   avatar           : "profile.jpg"
+  avatar_flip      : "profile-real.jpg"  # shown on hover (3D flip)
   bio              : "Ph.D. student in Operations Research at Georgia Tech's H. Milton Stewart School of Industrial and Systems Engineering (ISyE)."
   location         : "Atlanta, GA"
   employer         : "Georgia Institute of Technology"
