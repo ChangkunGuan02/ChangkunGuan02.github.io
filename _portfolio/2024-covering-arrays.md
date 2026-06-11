@@ -1,6 +1,6 @@
 ---
 title: "Structure of Optimal Covering Arrays"
-excerpt: "Optimization of combinatorial interaction testing with binary parameters and constraints — structural proofs about optimal solutions, with models in Gurobi and algorithms in Python.<br/><i>Bucknell University, 2022–2024</i>"
+excerpt: "<i>Bucknell University, 2022–2024</i>"
 collection: portfolio
 date: 2024-05-01
 ---

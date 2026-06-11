@@ -97,6 +97,12 @@ h1, h2, h3, h4 {
   margin-bottom: 0.35em;
 }
 
+/* Publication citations: muted, no label */
+.archive__item-citation {
+  font-size: 0.8em;
+  color: #595959;
+}
+
 /* CV publication/talk/teaching lists: cards, not bullets */
 .cv-list {
   list-style: none;

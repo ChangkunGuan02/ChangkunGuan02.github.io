@@ -1,6 +1,6 @@
 ---
 title: "Deep Learning for Real-Time Order Fulfillment"
-excerpt: "A two-stage contextual stochastic optimization framework for large-scale e-commerce order fulfillment, with deep neural networks that approximate optimization solutions for real-time deployment.<br/><i>Georgia Tech, 2025 — NeurIPS ML&times;OR Workshop 2025</i>"
+excerpt: "<i>Georgia Tech, 2025 — NeurIPS ML&times;OR Workshop 2025</i>"
 collection: portfolio
 date: 2025-12-06
 ---

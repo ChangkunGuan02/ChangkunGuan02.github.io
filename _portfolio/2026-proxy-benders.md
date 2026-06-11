@@ -1,6 +1,6 @@
 ---
 title: "Proxy Benders Decomposition"
-excerpt: "Replacing Benders subproblem optimization with certified optimization proxies that generate provably valid cuts — up to 161&times; median speedups on large facility location instances.<br/><i>Georgia Tech, 2026 — arXiv:2606.07403</i>"
+excerpt: "<i>Georgia Tech, 2026 — arXiv:2606.07403</i>"
 collection: portfolio
 date: 2026-06-05
 ---

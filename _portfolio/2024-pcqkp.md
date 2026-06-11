@@ -1,6 +1,6 @@
 ---
 title: "Precedence-Constrained Quadratic Knapsack Problem"
-excerpt: "Exact and approximate solution methods for the previously unstudied PC-QKP, an NP-hard nonlinear combinatorial optimization problem.<br/><i>Bucknell University, 2024 — Honors Thesis</i>"
+excerpt: "<i>Bucknell University, 2024 — Honors Thesis</i>"
 collection: portfolio
 date: 2024-05-12
 ---

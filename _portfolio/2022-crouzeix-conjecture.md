@@ -1,6 +1,6 @@
 ---
 title: "Crouzeix's Conjecture for Nilpotent Matrices"
-excerpt: "A geometric analysis establishing the level set Crouzeix conjecture for classes of nilpotent matrices associated to compressions of the shift.<br/><i>Bucknell University, 2022 — published in Concrete Operators</i>"
+excerpt: "<i>Bucknell University, 2022 — published in Concrete Operators</i>"
 collection: portfolio
 date: 2022-08-31
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Stochastic Multi-objective Bandits"
-excerpt: "How hard are multi-objective bandits, really? Optimal Pareto-regret bounds showing they match single-objective performance, with no dependence on the number of objectives.<br/><i>2026 — arXiv:2604.07096</i>"
+excerpt: "<i>2026 — arXiv:2604.07096</i>"
 collection: portfolio
 date: 2026-04-08
 ---
