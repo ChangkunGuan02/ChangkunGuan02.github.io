@@ -9,19 +9,24 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 
-gem "github-pages", group: :jekyll_plugins
-
-# If you want to use Jekyll native, uncomment the line below.
-# To upgrade, run `bundle update`.
-
-# gem "jekyll"
+# Jekyll 3.10 matches the version GitHub Pages runs server-side.
+gem "jekyll", "~> 3.10"
+gem "kramdown-parser-gfm"
 
 gem "wdm", "~> 0.1.0" if Gem.win_platform?
+
+# Standard-library gems no longer bundled with Ruby >= 3.4 (needed by Jekyll 3.x)
+gem "csv"
+gem "base64"
+gem "bigdecimal"
+gem "webrick"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   # gem "jekyll-archives"
   gem "jekyll-feed"
   gem 'jekyll-sitemap'
-  gem 'hawkins'
+  gem 'jekyll-paginate'
+  gem 'jekyll-gist'
+  gem 'jekyll-redirect-from'
 end

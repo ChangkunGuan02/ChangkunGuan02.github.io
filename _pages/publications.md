@@ -1,14 +1,12 @@
 ---
 layout: archive
-title: "Research"
-permalink: /research/
+title: "Publications"
+permalink: /publications/
 author_profile: true
-redirect_from:
-  - /portfolio/
 ---
 
 {% include base_path %}
 
-{% for post in site.portfolio reversed %}
+{% for post in site.publications reversed %}
   {% include archive-single.html %}
 {% endfor %}

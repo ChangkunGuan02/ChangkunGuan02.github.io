@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Changkun Guan"
 title_separator          : "-"
 name                     : &name "Changkun Guan"
-description              : &description "Ph.D. student in Operations Research at Georgia Tech"
+description              : &description "Ph.D. student in Operations Research at Georgia Tech ISyE. Combinatorial optimization, integer programming, and machine learning for operations research."
 url                      : https://changkunguan02.github.io # the base hostname & protocol for your site
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "ChangkunGuan02/ChangkunGuan02.github.io"
@@ -62,7 +62,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Open Graph/Twitter default site image
+og_image                 : "avatar.svg" # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -73,7 +73,7 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
+  provider               :  false # false (default), "google", "google-universal", "custom"
   google:
     tracking_id          :
 
@@ -81,13 +81,13 @@ analytics:
 # Site Author
 author:
   name             : "Changkun Guan"
-  avatar           : 
+  avatar           : "avatar.svg"
   bio              : "Ph.D. student in Operations Research at Georgia Tech's H. Milton Stewart School of Industrial and Systems Engineering (ISyE)."
   location         : "Atlanta, GA"
   employer         : "Georgia Institute of Technology"
-  pubmed           : 
-  googlescholar    : ""
-  email            : "changkunguan2333@gmail.com"
+  pubmed           :
+  googlescholar    :
+  email            : "cguan62@gatech.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -125,6 +125,9 @@ include:
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
+  - old_hugo
+  - markdown_generator
+  - vendor
   - .asset-cache
   - .bundle
   - .jekyll-assets-cache

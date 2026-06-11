@@ -1,0 +1,125 @@
+/* ==========================================================================
+   Custom styles - Georgia Tech inspired palette
+   Navy: #003057 | Gold: #B3A369 | Link blue: #00509f
+   ========================================================================== */
+
+$gt-navy: #003057;
+$gt-gold: #B3A369;
+$gt-blue: #00509f;
+
+/* Links */
+a {
+  color: $gt-blue;
+
+  &:hover {
+    color: mix(#000, $gt-blue, 25%);
+  }
+}
+
+/* Masthead site title */
+.masthead {
+  border-bottom: 3px solid $gt-gold;
+
+  .site-title {
+    color: $gt-navy;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+}
+
+.greedy-nav {
+  a:hover {
+    color: $gt-navy;
+  }
+
+  .visible-links a:before {
+    background: $gt-gold;
+  }
+}
+
+/* Page titles get a subtle gold rule */
+.page__title {
+  color: $gt-navy;
+}
+
+h1, h2, h3, h4 {
+  color: $gt-navy;
+}
+
+.page__content {
+  h2 {
+    padding-bottom: 0.3em;
+    border-bottom: 2px solid $gt-gold;
+  }
+}
+
+/* Author sidebar */
+.author__avatar img {
+  border: 3px solid $gt-gold;
+  box-shadow: 0 2px 8px rgba(0, 48, 87, 0.18);
+}
+
+.author__name {
+  color: $gt-navy;
+}
+
+/* Archive items (publications, research, talks, teaching) as soft cards */
+.list__item .archive__item {
+  padding: 1em 1.25em;
+  margin-bottom: 1em;
+  border: 1px solid #e3e6ea;
+  border-left: 4px solid $gt-gold;
+  border-radius: 6px;
+  background: #fff;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+
+  &:hover {
+    box-shadow: 0 6px 18px rgba(0, 48, 87, 0.12);
+    transform: translateY(-2px);
+  }
+
+  .archive__item-title {
+    margin-top: 0;
+
+    a {
+      color: $gt-navy;
+      text-decoration: none;
+
+      &:hover {
+        color: $gt-blue;
+      }
+    }
+  }
+}
+
+/* News list on the home page: tighter rhythm */
+.page__content ul li {
+  margin-bottom: 0.35em;
+}
+
+/* CV publication/talk/teaching lists: cards, not bullets */
+.cv-list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+/* Buttons */
+.btn--inverse {
+  border: 1px solid $gt-navy;
+  color: $gt-navy;
+
+  &:hover {
+    background-color: $gt-navy;
+    color: #fff;
+  }
+}
+
+/* Footer */
+.page__footer {
+  border-top: 3px solid $gt-gold;
+}

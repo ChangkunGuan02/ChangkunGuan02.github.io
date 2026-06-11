@@ -10,50 +10,64 @@ redirect_from:
 {% include base_path %}
 
 Education
-======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+------
+* **Ph.D. in Operations Research**, Georgia Institute of Technology, 2024–Present
+  * H. Milton Stewart School of Industrial and Systems Engineering (ISyE)
+* **B.S. in Applied Mathematics** (Honors, Concentration in Statistics) and **B.A. in Computer Science**, Bucknell University, 2020–2024
+  * Graduated **Summa Cum Laude**
 
-Work experience
-======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+Research experience
+------
+* **Graduate Researcher**, Georgia Institute of Technology — ISyE (2024–Present)
+  * Machine learning for operations research: deep learning-driven contextual stochastic optimization for real-time order fulfillment (NeurIPS ML&times;OR Workshop 2025)
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-  
+* **Honors Thesis**, Bucknell University (2024)
+  * *The Precedence-Constrained Quadratic Knapsack Problem* — developed exact and approximate solution methods, experimented with heuristics and metaheuristics, and generated difficult benchmark instances for this previously unstudied NP-hard problem
+  * Advisor: Dr. Lucas Waddell
+
+* **Undergraduate Researcher**, Bucknell University — Structure of Optimal Covering Arrays (2022–2024)
+  * Studied optimization of combinatorial interaction testing with binary parameters and constraints; worked on proofs about the structure of optimal solutions and implemented models in Gurobi and algorithms in Python
+  * Proposed and received funding from Bucknell's Program for Undergraduate Research
+  * Principal Investigator: Dr. Thiago Serra
+
+* **Undergraduate Researcher**, Bucknell University — Crouzeix's Conjecture (2022)
+  * Co-authored a geometric analysis establishing the level set Crouzeix conjecture for classes of nilpotent matrices, published in *Concrete Operators* (2024); presented at the Joint Mathematics Meetings 2023 in Boston
+  * Developed a Mathematica tool for fast visualization of numerical ranges
+  * Principal Investigator: Dr. Kelly Bickel
+
+Awards & honors
+------
+* **The Pi Mu Epsilon Society Prize**, Bucknell University, 2024 — awarded to the member of the graduating class with the most outstanding work in mathematics
+* **INFORMS Undergraduate Scholarship**, INFORMS, 2023
+* **Mathematics Scholarship**, Bucknell University, 2020–2024
+* **The Professor George Morris Philips Prize**, Bucknell University, 2020 — outstanding academic performance in mathematics
+* **Dean's List**, Bucknell University — all semesters
+* Honor societies: **Pi Mu Epsilon** (mathematics, 2023), **Omega Rho** (operations research, 2023), **Tri-Alpha** (first-generation students, 2023)
+
 Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+------
+* **Optimization**: integer programming, combinatorial optimization, stochastic optimization, Gurobi
+* **Programming**: Python, R, Java, Mathematica
+* **Machine learning**: deep learning for decision making, learning-to-optimize
+* **Languages**: English, Mandarin Chinese
 
 Publications
-======
-  <ul>{% for post in site.publications %}
+------
+  <ul class="cv-list">{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
+
 Talks
-======
-  <ul>{% for post in site.talks %}
+------
+  <ul class="cv-list">{% for post in site.talks reversed %}
     {% include archive-single-talk-cv.html %}
   {% endfor %}</ul>
-  
+
 Teaching
-======
-  <ul>{% for post in site.teaching %}
+------
+  <ul class="cv-list">{% for post in site.teaching reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+
+<br>
+A PDF version of my CV is available <a href="{{ base_path }}/files/cv.pdf">here</a>.
