@@ -2,6 +2,7 @@
 title: "Precedence-Constrained Quadratic Knapsack Problem"
 excerpt: "<i>Bucknell University, 2024 — Honors Thesis</i>"
 collection: portfolio
+area: optimization
 date: 2024-05-12
 ---
 

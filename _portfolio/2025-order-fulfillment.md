@@ -2,6 +2,7 @@
 title: "Deep Learning for Real-Time Order Fulfillment"
 excerpt: "<i>Georgia Tech, 2025 — NeurIPS ML&times;OR Workshop 2025</i>"
 collection: portfolio
+area: mlxopt
 date: 2025-12-06
 ---
 

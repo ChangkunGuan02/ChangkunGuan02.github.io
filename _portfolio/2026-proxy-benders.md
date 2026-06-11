@@ -2,6 +2,7 @@
 title: "Proxy Benders Decomposition"
 excerpt: "<i>Georgia Tech, 2026 — arXiv:2606.07403</i>"
 collection: portfolio
+area: mlxopt
 date: 2026-06-05
 ---
 

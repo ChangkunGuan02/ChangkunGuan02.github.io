@@ -2,6 +2,7 @@
 title: "Structure of Optimal Covering Arrays"
 excerpt: "<i>Bucknell University, 2022–2024</i>"
 collection: portfolio
+area: optimization
 date: 2024-05-01
 ---
 

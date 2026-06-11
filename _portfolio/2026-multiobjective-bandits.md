@@ -2,6 +2,7 @@
 title: "Stochastic Multi-objective Bandits"
 excerpt: "<i>2026 — arXiv:2604.07096</i>"
 collection: portfolio
+area: ml
 date: 2026-04-08
 ---
 

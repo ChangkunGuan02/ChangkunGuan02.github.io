@@ -2,6 +2,7 @@
 title: "Crouzeix's Conjecture for Nilpotent Matrices"
 excerpt: "<i>Bucknell University, 2022 — published in Concrete Operators</i>"
 collection: portfolio
+area: legacy
 date: 2022-08-31
 ---
 

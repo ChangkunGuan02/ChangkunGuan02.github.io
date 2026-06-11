@@ -9,6 +9,143 @@ redirect_from:
 
 {% include base_path %}
 
-{% for post in site.portfolio reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+{% assign projects = site.portfolio | sort: 'date' | reverse %}
+{% assign opt_count = site.portfolio | where: "area", "optimization" | size %}
+{% assign ml_count = site.portfolio | where: "area", "ml" | size %}
+{% assign mix_count = site.portfolio | where: "area", "mlxopt" | size %}
+
+<p class="research-intro">I work at the intersection of <strong>optimization</strong> and <strong>machine learning</strong>. Hover or tap a region of the map to see the papers in that area — click to pin it.</p>
+
+<div class="research-venn-wrap">
+  <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Research map: Optimization, Machine Learning, and their intersection">
+    <circle data-region="optimization" cx="260" cy="190" r="150" class="venn-circle venn-opt"/>
+    <circle data-region="ml" cx="440" cy="190" r="150" class="venn-circle venn-ml"/>
+    <path data-region="mlxopt" d="M350,70 A150,150 0 0,1 350,310 A150,150 0 0,1 350,70 Z" class="venn-lens"/>
+    <text x="185" y="180" class="venn-label" pointer-events="none">Optimization</text>
+    <text x="185" y="204" class="venn-count" pointer-events="none">{{ opt_count }} works</text>
+    <text x="515" y="180" class="venn-label" pointer-events="none">Machine</text>
+    <text x="515" y="202" class="venn-label" pointer-events="none">Learning</text>
+    <text x="515" y="226" class="venn-count" pointer-events="none">{{ ml_count }} works</text>
+    <text x="350" y="180" class="venn-label venn-label-mix" pointer-events="none">ML &#8745; OR</text>
+    <text x="350" y="204" class="venn-count venn-count-mix" pointer-events="none">{{ mix_count }} works</text>
+  </svg>
+  <p class="venn-hint" id="venn-hint">Hover a region &mdash; or tap on mobile &mdash; to light up the papers below.</p>
+</div>
+
+<div class="research-grid" id="research-grid">
+  {% for p in projects %}{% unless p.area == "legacy" %}
+  <a class="research-card" data-area="{{ p.area }}" href="{{ base_path }}{{ p.url }}">
+    <span class="research-chip research-chip-{{ p.area }}">{% if p.area == "optimization" %}Optimization{% elsif p.area == "ml" %}Machine Learning{% else %}ML &#8745; OR{% endif %}</span>
+    <h3 class="research-card-title">{{ p.title }}</h3>
+    <p class="research-card-meta">{{ p.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+  </a>
+  {% endunless %}{% endfor %}
+</div>
+
+<h2 class="legacy-heading">Earlier direction: Functional Analysis &amp; Operator Theory</h2>
+<p class="research-intro">Before moving into optimization and machine learning, I worked in functional analysis and operator theory — on numerical ranges and Crouzeix&rsquo;s conjecture.</p>
+<div class="research-grid research-grid-legacy">
+  {% for p in projects %}{% if p.area == "legacy" %}
+  <a class="research-card research-card-legacy" href="{{ base_path }}{{ p.url }}">
+    <span class="research-chip research-chip-legacy">Operator Theory</span>
+    <h3 class="research-card-title">{{ p.title }}</h3>
+    <p class="research-card-meta">{{ p.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+  </a>
+  {% endif %}{% endfor %}
+</div>
+
+<style>
+.research-intro { margin-bottom: 0.6em; }
+.research-venn-wrap { max-width: 640px; margin: 0 auto 1.2em; }
+.research-venn-wrap svg { width: 100%; height: auto; display: block; }
+
+.venn-circle, .venn-lens { cursor: pointer; transition: fill-opacity 0.35s ease, stroke-width 0.35s ease; }
+.venn-opt  { fill: #003057; fill-opacity: 0.10; stroke: #003057; stroke-width: 2; }
+.venn-ml   { fill: #00759c; fill-opacity: 0.10; stroke: #00759c; stroke-width: 2; }
+.venn-lens { fill: #B3A369; fill-opacity: 0.22; stroke: #B3A369; stroke-width: 2;
+             animation: lensPulse 2.6s ease-in-out 3; }
+@keyframes lensPulse { 0%,100% { fill-opacity: 0.22; } 50% { fill-opacity: 0.42; } }
+
+svg.has-active .venn-circle, svg.has-active .venn-lens { fill-opacity: 0.05; }
+svg.has-active .region-active.venn-opt  { fill-opacity: 0.30; stroke-width: 3.5; }
+svg.has-active .region-active.venn-ml   { fill-opacity: 0.30; stroke-width: 3.5; }
+svg.has-active .region-active.venn-lens { fill-opacity: 0.55; stroke-width: 3.5; animation: none; }
+
+.venn-label { font-size: 21px; font-weight: 700; fill: #003057; text-anchor: middle;
+              font-family: inherit; }
+.venn-label-mix { fill: #6d5f33; }
+.venn-count { font-size: 14px; fill: #666; text-anchor: middle; font-family: inherit; }
+.venn-count-mix { fill: #6d5f33; }
+
+.venn-hint { text-align: center; font-size: 0.78em; color: #888; margin-top: 0.4em;
+             transition: opacity 0.4s ease; }
+
+.research-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+                 gap: 1em; margin-bottom: 1.6em; }
+.research-card { display: block; padding: 1em 1.15em; border: 1px solid #e3e6ea;
+                 border-left: 4px solid #B3A369; border-radius: 6px; background: #fff;
+                 text-decoration: none !important; color: inherit;
+                 transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease,
+                             filter 0.3s ease, border-color 0.3s ease; }
+.research-card:hover { box-shadow: 0 6px 18px rgba(0, 48, 87, 0.12); transform: translateY(-2px); }
+.research-card-title { margin: 0.45em 0 0.3em; font-size: 1.02em; color: #003057; }
+.research-card-meta { margin: 0; font-size: 0.78em; color: #666; }
+
+.research-chip { display: inline-block; font-size: 0.66em; font-weight: 700;
+                 letter-spacing: 0.06em; text-transform: uppercase; padding: 0.22em 0.7em;
+                 border-radius: 999px; color: #fff; }
+.research-chip-optimization { background: #003057; }
+.research-chip-ml { background: #00759c; }
+.research-chip-mlxopt { background: #8a7a45; }
+.research-chip-legacy { background: #5b5b6e; }
+
+.research-grid.filtering .research-card { opacity: 0.25; filter: grayscale(0.8); transform: scale(0.97); }
+.research-grid.filtering .research-card.card-active { opacity: 1; filter: none;
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 24px rgba(0, 48, 87, 0.18); border-left-color: #003057; }
+
+.legacy-heading { margin-top: 1.2em; }
+.research-grid-legacy .research-card { border-left-color: #5b5b6e; }
+</style>
+
+<script>
+(function () {
+  var svg = document.querySelector('.research-venn-wrap svg');
+  var regions = svg.querySelectorAll('[data-region]');
+  var grid = document.getElementById('research-grid');
+  var cards = grid.querySelectorAll('.research-card');
+  var hint = document.getElementById('venn-hint');
+  var pinned = null;
+
+  function setArea(area) {
+    svg.classList.toggle('has-active', !!area);
+    grid.classList.toggle('filtering', !!area);
+    regions.forEach(function (r) {
+      r.classList.toggle('region-active', r.getAttribute('data-region') === area);
+    });
+    cards.forEach(function (c) {
+      c.classList.toggle('card-active', c.getAttribute('data-area') === area);
+    });
+    if (area) { hint.style.opacity = '0'; }
+  }
+
+  regions.forEach(function (r) {
+    var name = r.getAttribute('data-region');
+    r.addEventListener('mouseenter', function () { if (!pinned) setArea(name); });
+    r.addEventListener('mouseleave', function () { if (!pinned) setArea(null); });
+    r.addEventListener('click', function () {
+      pinned = (pinned === name) ? null : name;
+      setArea(pinned);
+      if (history.replaceState) {
+        history.replaceState(null, '', pinned ? '#' + pinned : location.pathname);
+      }
+    });
+  });
+
+  var initial = location.hash.replace('#', '');
+  if (initial === 'optimization' || initial === 'ml' || initial === 'mlxopt') {
+    pinned = initial;
+    setArea(initial);
+  }
+})();
+</script>
