@@ -10,11 +10,6 @@ redirect_from:
 {% include base_path %}
 
 {% assign projects = site.portfolio | sort: 'date' | reverse %}
-{% assign opt_count = site.portfolio | where: "area", "optimization" | size %}
-{% assign ml_count = site.portfolio | where: "area", "ml" | size %}
-{% assign mix_count = site.portfolio | where: "area", "mlxopt" | size %}
-{% assign opt_total = opt_count | plus: mix_count %}
-{% assign ml_total = ml_count | plus: mix_count %}
 
 <p class="research-intro">I work at the intersection of <strong>optimization</strong> and <strong>machine learning</strong>. Hover or tap a region of the map to see the papers in that area — click to pin it.</p>
 
@@ -23,13 +18,10 @@ redirect_from:
     <circle data-region="optimization" cx="260" cy="190" r="150" class="venn-circle venn-opt"/>
     <circle data-region="ml" cx="440" cy="190" r="150" class="venn-circle venn-ml"/>
     <path data-region="mlxopt" d="M350,70 A150,150 0 0,1 350,310 A150,150 0 0,1 350,70 Z" class="venn-lens"/>
-    <text x="185" y="180" class="venn-label" pointer-events="none">Optimization</text>
-    <text x="185" y="204" class="venn-count" pointer-events="none">{{ opt_total }} works</text>
-    <text x="515" y="180" class="venn-label" pointer-events="none">Machine</text>
-    <text x="515" y="202" class="venn-label" pointer-events="none">Learning</text>
-    <text x="515" y="226" class="venn-count" pointer-events="none">{{ ml_total }} works</text>
-    <text x="350" y="180" class="venn-label venn-label-mix" pointer-events="none">ML &times; OR</text>
-    <text x="350" y="204" class="venn-count venn-count-mix" pointer-events="none">{{ mix_count }} works</text>
+    <text x="185" y="197" class="venn-label" pointer-events="none">Optimization</text>
+    <text x="515" y="186" class="venn-label" pointer-events="none">Machine</text>
+    <text x="515" y="208" class="venn-label" pointer-events="none">Learning</text>
+    <text x="350" y="197" class="venn-label venn-label-mix" pointer-events="none">ML &times; OR</text>
   </svg>
   <p class="venn-hint" id="venn-hint">Hover a region &mdash; or tap on mobile &mdash; to light up the papers below. ML &times; OR papers belong to both fields.</p>
 </div>
@@ -77,8 +69,6 @@ svg.has-active .region-subactive.venn-lens { fill-opacity: 0.38; stroke-width: 2
 .venn-label { font-size: 21px; font-weight: 700; fill: #003057; text-anchor: middle;
               font-family: inherit; }
 .venn-label-mix { fill: #6d5f33; }
-.venn-count { font-size: 14px; fill: #666; text-anchor: middle; font-family: inherit; }
-.venn-count-mix { fill: #6d5f33; }
 
 .venn-hint { text-align: center; font-size: 0.78em; color: #888; margin-top: 0.4em;
              transition: opacity 0.4s ease; }
