@@ -19,7 +19,9 @@ Education
 Research experience
 ------
 * **Graduate Researcher**, Georgia Institute of Technology — ISyE (2024–Present)
+  * End-to-end supply chain planning in the paper industry via column generation and Benders decomposition (arXiv:2607.16618)
   * Proxy Benders Decomposition: replacing Benders subproblem optimization with certified optimization proxies that generate provably valid cuts (arXiv:2606.07403)
+  * Learning optimization proxies for sequential contextual stochastic programs (arXiv:2606.25362)
   * Optimal Pareto-regret bounds for stochastic multi-objective multi-armed bandits (arXiv:2604.07096)
   * Deep learning-driven contextual stochastic optimization for real-time order fulfillment (NeurIPS ML&times;OR Workshop 2025)
 
@@ -31,6 +33,7 @@ Research experience
   * Studied optimization of combinatorial interaction testing with binary parameters and constraints; worked on proofs about the structure of optimal solutions and implemented models in Gurobi and algorithms in Python
   * Proposed and received funding from Bucknell's Program for Undergraduate Research
   * Principal Investigator: Dr. Thiago Serra
+  * Culminated in *Optimal Combinatorial Testing with Constraints: The Balancing Act* (arXiv:2607.17083, 2026)
 
 * **Undergraduate Researcher**, Bucknell University — Crouzeix's Conjecture (2022)
   * Co-authored a geometric analysis establishing the level set Crouzeix conjecture for classes of nilpotent matrices, published in *Concrete Operators* (2024); presented at the Joint Mathematics Meetings 2023 in Boston

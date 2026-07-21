@@ -18,12 +18,16 @@ My research sits at the intersection of **optimization** and **machine learning*
 - **Covering arrays and combinatorial interaction testing** — structure of optimal solutions under constraints
 - **Matrix analysis** — numerical ranges and Crouzeix's conjecture
 
-My recent work includes the [Proxy Benders Decomposition](https://arxiv.org/abs/2606.07403), which replaces Benders subproblem optimization with certified optimization proxies; [optimal Pareto-regret bounds for stochastic multi-objective bandits](https://arxiv.org/abs/2604.07096); and a deep learning-driven contextual stochastic optimization framework for real-time order fulfillment (NeurIPS ML&times;OR Workshop 2025). See my [publications](/publications/) and [research projects](/research/) for details.
+My recent work includes the [Proxy Benders Decomposition](https://arxiv.org/abs/2606.07403), which replaces Benders subproblem optimization with certified optimization proxies; [end-to-end supply chain planning in the paper industry](https://arxiv.org/abs/2607.16618) via column generation and Benders decomposition; [optimal Pareto-regret bounds for stochastic multi-objective bandits](https://arxiv.org/abs/2604.07096); and [learning optimization proxies for real-time order fulfillment](https://arxiv.org/abs/2606.25362). See my [publications](/publications/) and [research projects](/research/) for details.
 
 News
 ------
+* **Jul 2026** — Our paper [*End-to-End Supply Chain Planning in the Paper Industry Via Column Generation and Benders Decomposition*](https://arxiv.org/abs/2607.16618) (with Amira Hijazi and Pascal Van Hentenryck) is on arXiv!
+* **Jul 2026** — Our paper [*Optimal Combinatorial Testing with Constraints: The Balancing Act*](https://arxiv.org/abs/2607.17083) (with Thiago Serra, Hunter Gehman, Sumit Dhar, Mikey Ferguson, John Hooker, and Marcel Schoppers) is on arXiv!
+* **Jun 2026** — The extended version of our order fulfillment work, [*Learning Optimization Proxies for Sequential Contextual Stochastic Programs*](https://arxiv.org/abs/2606.25362) (with Tinghan Ye, Shuaicheng Tong, Beste Basciftci, and Pascal Van Hentenryck), is on arXiv!
 * **Jun 2026** — Our paper [*The Proxy Benders Decomposition*](https://arxiv.org/abs/2606.07403) (with El Mehdi Er Raqabi, Mathieu Tanneau, and Pascal Van Hentenryck) is on arXiv!
 * **Apr 2026** — Our paper [*Are Stochastic Multi-objective Bandits Harder than Single-objective Bandits?*](https://arxiv.org/abs/2604.07096) (with Mengfan Xu) is on arXiv!
+* **Feb 2026** — [*SkillsBench*](https://arxiv.org/abs/2602.12670), a community benchmark for LLM agent skills that I co-authored, is on arXiv!
 * **Dec 2025** — Our paper *Deep Learning-Driven Contextual Stochastic Optimization for Real-Time Order Fulfillment* (with Tinghan Ye, Shuaicheng Tong, Beste Basciftci, and Pascal Van Hentenryck) was presented at the [NeurIPS 2025 ML&times;OR Workshop](https://openreview.net/forum?id=uhF4sYW6Nd)!
 * **Dec 2024** — Our paper [*Crouzeix's conjecture, compressions of shifts, and classes of nilpotent matrices*](https://doi.org/10.1515/conop-2024-0004) was published in *Concrete Operators*.
 * **Aug 2024** — Started my Ph.D. in Operations Research at Georgia Tech ISyE!
