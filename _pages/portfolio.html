@@ -11,19 +11,20 @@ redirect_from:
 
 {% assign projects = site.portfolio | sort: 'date' | reverse %}
 
-<p class="research-intro">I work at the intersection of <strong>optimization</strong> and <strong>machine learning</strong>. Hover or tap a region of the map to see the papers in that area — click to pin it.</p>
+<p class="research-intro">I work at the intersection of <strong>optimization</strong> and <strong>machine learning</strong>.</p>
 
 <div class="research-venn-wrap">
-  <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Research map: Optimization, Machine Learning, and their intersection">
-    <circle data-region="optimization" cx="260" cy="190" r="150" class="venn-circle venn-opt"/>
-    <circle data-region="ml" cx="440" cy="190" r="150" class="venn-circle venn-ml"/>
-    <path data-region="mlxopt" d="M350,70 A150,150 0 0,1 350,310 A150,150 0 0,1 350,70 Z" class="venn-lens"/>
+  <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Research map: Optimization, Machine Learning, and their intersection">
+    <circle data-region="optimization" cx="260" cy="190" r="150" class="venn-circle venn-opt" tabindex="0" role="button" aria-pressed="false" aria-label="Show Optimization papers, including ML &times; OR"/>
+    <circle data-region="ml" cx="440" cy="190" r="150" class="venn-circle venn-ml" tabindex="0" role="button" aria-pressed="false" aria-label="Show Machine Learning papers, including ML &times; OR"/>
+    <path data-region="mlxopt" d="M350,70 A150,150 0 0,1 350,310 A150,150 0 0,1 350,70 Z" class="venn-lens" tabindex="0" role="button" aria-pressed="false" aria-label="Show ML &times; OR papers"/>
     <text x="185" y="197" class="venn-label" pointer-events="none">Optimization</text>
     <text x="515" y="186" class="venn-label" pointer-events="none">Machine</text>
     <text x="515" y="208" class="venn-label" pointer-events="none">Learning</text>
     <text x="350" y="197" class="venn-label venn-label-mix" pointer-events="none">ML &times; OR</text>
   </svg>
-  <p class="venn-hint" id="venn-hint">Hover a region &mdash; or tap on mobile &mdash; to light up the papers below. ML &times; OR papers belong to both fields.</p>
+  <p class="venn-hint" id="venn-hint">Hover a region &mdash; or tap on mobile &mdash; to light up the papers below, and click to pin it. ML &times; OR papers belong to both fields.</p>
+  <p class="venn-status" id="venn-status" aria-live="polite" hidden><span id="venn-status-text"></span> <button type="button" class="venn-clear" id="venn-clear" hidden>Show all</button></p>
 </div>
 
 <div class="research-grid" id="research-grid">
@@ -70,8 +71,13 @@ svg.has-active .region-subactive.venn-lens { fill-opacity: 0.38; stroke-width: 2
               font-family: inherit; }
 .venn-label-mix { fill: #6d5f33; }
 
-.venn-hint { text-align: center; font-size: 0.78em; color: #888; margin-top: 0.4em;
-             transition: opacity 0.4s ease; }
+.venn-hint { text-align: center; font-size: 0.78em; color: #888; margin-top: 0.4em; }
+.venn-status { text-align: center; font-size: 0.82em; font-weight: 600; color: #003057; margin-top: 0.4em; }
+.venn-clear { margin-left: 0.5em; padding: 0.15em 0.75em; font: inherit; font-size: 0.92em; color: #003057;
+              background: #fff; border: 1px solid #B3A369; border-radius: 999px; cursor: pointer; }
+.venn-clear:hover, .venn-clear:focus-visible { background: #B3A369; color: #fff; }
+.venn-circle:focus, .venn-lens:focus { outline: none; }
+.venn-circle:focus-visible, .venn-lens:focus-visible { stroke-width: 4; stroke-dasharray: 8 5; }
 
 .research-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
                  gap: 1em; margin-bottom: 1.6em; }
@@ -108,6 +114,12 @@ svg.has-active .region-subactive.venn-lens { fill-opacity: 0.38; stroke-width: 2
   var grid = document.getElementById('research-grid');
   var cards = grid.querySelectorAll('.research-card');
   var hint = document.getElementById('venn-hint');
+  var status = document.getElementById('venn-status');
+  var statusText = document.getElementById('venn-status-text');
+  var clearBtn = document.getElementById('venn-clear');
+  var LABELS = { optimization: 'Showing Optimization papers, including ML \u00d7 OR.',
+                 ml: 'Showing Machine Learning papers, including ML \u00d7 OR.',
+                 mlxopt: 'Showing ML \u00d7 OR papers.' };
   var pinned = null;
 
   /* ML x OR is a subset of both parents: activating a parent field also
@@ -130,26 +142,43 @@ svg.has-active .region-subactive.venn-lens { fill-opacity: 0.38; stroke-width: 2
     cards.forEach(function (c) {
       c.classList.toggle('card-active', !!area && matches(c.getAttribute('data-area'), area));
     });
-    if (area) { hint.style.opacity = '0'; }
+    regions.forEach(function (r) {
+      r.setAttribute('aria-pressed', r.getAttribute('data-region') === pinned ? 'true' : 'false');
+    });
+    hint.hidden = !!area;
+    status.hidden = !area;
+    statusText.textContent = area ? LABELS[area] : '';
+    clearBtn.hidden = !pinned;
   }
+
+  function pin(name) {
+    pinned = name;
+    setArea(pinned);
+    if (history.replaceState) {
+      history.replaceState(null, '', pinned ? '#' + pinned : location.pathname);
+    }
+  }
+
+  clearBtn.addEventListener('click', function () { pin(null); });
 
   regions.forEach(function (r) {
     var name = r.getAttribute('data-region');
     r.addEventListener('mouseenter', function () { if (!pinned) setArea(name); });
     r.addEventListener('mouseleave', function () { if (!pinned) setArea(null); });
-    r.addEventListener('click', function () {
-      pinned = (pinned === name) ? null : name;
-      setArea(pinned);
-      if (history.replaceState) {
-        history.replaceState(null, '', pinned ? '#' + pinned : location.pathname);
+    r.addEventListener('focus', function () { if (!pinned) setArea(name); });
+    r.addEventListener('blur', function () { if (!pinned) setArea(null); });
+    r.addEventListener('click', function () { pin(pinned === name ? null : name); });
+    r.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        pin(pinned === name ? null : name);
       }
     });
   });
 
   var initial = location.hash.replace('#', '');
   if (initial === 'optimization' || initial === 'ml' || initial === 'mlxopt') {
-    pinned = initial;
-    setArea(initial);
+    pin(initial);
   }
 })();
 </script>

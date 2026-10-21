@@ -19,11 +19,12 @@ Education
 Research experience
 ------
 * **Graduate Researcher**, Georgia Institute of Technology — ISyE (2024–Present)
+  * OPTAgent: LLM-driven synthesis of solver-selection and configuration policies under shared compute budgets (co-first author, NeurIPS 2026 ML&times;OR Workshop)
   * End-to-end supply chain planning in the paper industry via column generation and Benders decomposition (arXiv:2607.16618)
   * Proxy Benders Decomposition: replacing Benders subproblem optimization with certified optimization proxies that generate provably valid cuts (arXiv:2606.07403)
   * Learning optimization proxies for sequential contextual stochastic programs (arXiv:2606.25362)
   * Optimal Pareto-regret bounds for stochastic multi-objective multi-armed bandits (arXiv:2604.07096)
-  * Deep learning-driven contextual stochastic optimization for real-time order fulfillment (NeurIPS ML&times;OR Workshop 2025)
+  * Deep learning-driven contextual stochastic optimization for real-time order fulfillment (NeurIPS 2025 ML&times;OR Workshop)
 
 * **Honors Thesis**, Bucknell University (2024)
   * *The Precedence-Constrained Quadratic Knapsack Problem* — developed exact and approximate solution methods, experimented with heuristics and metaheuristics, and generated difficult benchmark instances for this previously unstudied NP-hard problem

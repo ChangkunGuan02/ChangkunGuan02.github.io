@@ -156,3 +156,31 @@ h1, h2, h3, h4 {
 .page__footer {
   border-top: 3px solid $gt-gold;
 }
+
+/* Last-updated badge: under name + bio in the sidebar (visible on all screen sizes) */
+.author__updated {
+  display: inline-block;
+  margin: 0.6em 0 0.8em;
+  padding: 0.25em 0.75em;
+  font-size: 0.72em;
+  font-weight: 600;
+  color: $gt-navy;
+  background: rgba(179, 163, 105, 0.18);
+  border: 1px solid $gt-gold;
+  border-radius: 999px;
+  white-space: nowrap;
+
+  i { color: #8a7a45; }
+}
+
+/* Last-updated line in the footer: its own line, darker and bolder than the copyright */
+.page__footer .page__footer-updated .fas { color: #8a7a45; }
+
+.page__footer-updated {
+  margin-top: 0.35em;
+  font-size: 0.75em;
+  font-weight: 700;
+  color: $gt-navy;
+
+  i { color: #8a7a45; }
+}

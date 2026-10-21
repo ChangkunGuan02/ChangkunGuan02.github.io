@@ -37,6 +37,7 @@
   <div class="author__content">
     <h3 class="author__name">{{ author.name }}</h3>
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
+    <p class="author__updated"><i class="fas fa-fw fa-clock" aria-hidden="true"></i> Last updated <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: "%B %-d, %Y" }}</time></p>
   </div>
 
   <div class="author__urls-wrapper">

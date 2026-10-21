@@ -1,6 +1,6 @@
 ---
 title: "Deep Learning for Real-Time Order Fulfillment"
-excerpt: "<i>Georgia Tech, 2025–2026 — NeurIPS ML&times;OR 2025 &amp; arXiv:2606.25362</i>"
+excerpt: "<i>Georgia Tech, 2025–2026 — NeurIPS 2025 ML&times;OR Workshop &amp; arXiv:2606.25362</i>"
 collection: portfolio
 area: mlxopt
 date: 2026-06-24
@@ -15,6 +15,6 @@ The extended version, [*Learning Optimization Proxies for Sequential Contextual 
 **Key contributions:**
 - Two-stage contextual stochastic optimization formulation for real-time order fulfillment
 - Deep learning models that approximate optimization solutions at deployment scale
-- Presented at the NeurIPS 2025 Workshop on Machine Learning in Operations Research (ML&times;OR)
+- Presented at the NeurIPS 2025 Workshop on ML&times;OR
 
 [Paper on OpenReview](https://openreview.net/forum?id=uhF4sYW6Nd)
