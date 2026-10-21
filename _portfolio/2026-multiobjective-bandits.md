@@ -15,4 +15,6 @@ In this work (joint with Mengfan Xu), we show that Pareto regret is governed by 
 - An efficient algorithm with order-of-magnitude empirical regret improvements on synthetic and real datasets
 - Evidence of a fairness–hardness tradeoff that has no single-objective analogue
 
+Our follow-up studies the [adversarial setting](/portfolio/2026-adversarial-bandits/).
+
 [Paper on arXiv](https://arxiv.org/abs/2604.07096)

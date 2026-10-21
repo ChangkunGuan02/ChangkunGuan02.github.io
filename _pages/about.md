@@ -14,15 +14,17 @@ My research sits at the intersection of **optimization** and **machine learning*
 
 - **Combinatorial optimization and integer programming** — exact methods, decomposition, heuristics, and metaheuristics for hard discrete problems
 - **Machine learning for operations research** — optimization proxies for decomposition methods, and learning-based contextual stochastic optimization for real-time, large-scale decision making
-- **Online learning and bandits** — regret bounds for stochastic multi-objective multi-armed bandits
+- **Online learning and bandits** — Pareto-regret bounds for stochastic and adversarial multi-objective bandits
 - **Covering arrays and combinatorial interaction testing** — structure of optimal solutions under constraints
 - **Matrix analysis** — numerical ranges and Crouzeix's conjecture
 
-My recent work includes the [Proxy Benders Decomposition](https://arxiv.org/abs/2606.07403), which replaces Benders subproblem optimization with certified optimization proxies; [end-to-end supply chain planning in the paper industry](https://arxiv.org/abs/2607.16618) via column generation and Benders decomposition; [optimal Pareto-regret bounds for stochastic multi-objective bandits](https://arxiv.org/abs/2604.07096); [learning optimization proxies for real-time order fulfillment](https://arxiv.org/abs/2606.25362); and [OPTAgent](https://neurips.cc/virtual/2026/171719), which uses LLM agents to synthesize solver-selection policies (NeurIPS 2026 ML&times;OR Workshop). See my [publications](/publications/) and [research projects](/research/) for details.
+My recent work includes the [Proxy Benders Decomposition](https://arxiv.org/abs/2606.07403), which replaces Benders subproblem optimization with certified optimization proxies; [end-to-end supply chain planning in the paper industry](https://arxiv.org/abs/2607.16618) via column generation and Benders decomposition; Pareto-regret bounds for [stochastic](https://arxiv.org/abs/2604.07096) and [adversarial](https://arxiv.org/abs/2609.23092) multi-objective bandits; [learning optimization proxies for real-time order fulfillment](https://arxiv.org/abs/2606.25362); and [OPTAgent](https://neurips.cc/virtual/2026/171719), which uses LLM agents to synthesize solver-selection policies (NeurIPS 2026 ML&times;OR Workshop). See my [publications](/publications/) and [research projects](/research/) for details.
 
 News
 ------
 * **Oct 2026** — Our paper [*OPTAgent: From Standalone Solvers to Deployment-Aware Solver Ecosystems*](https://neurips.cc/virtual/2026/171719) (co-first author, with Hanyang Jiang, Miao Li, Danlin Li, Sikai Cheng, Pascal Van Hentenryck, and Russell Bent) was accepted to the NeurIPS 2026 Workshop on ML&times;OR!
+* **Oct 2026** — Our paper [*Match the Canvas, Not Just the Answer: Predictability-Aware SFT for Diffusion Language Models*](https://arxiv.org/abs/2610.18001) (with Miao Li, Hanyang Jiang, Pascal Van Hentenryck, and others) is on arXiv!
+* **Sep 2026** — Our paper [*The Role of Coordinates in Pareto Regret for Adversarial Multi-Objective Bandits*](https://arxiv.org/abs/2609.23092) (with Mengfan Xu) is on arXiv!
 * **Jul 2026** — Our paper [*End-to-End Supply Chain Planning in the Paper Industry Via Column Generation and Benders Decomposition*](https://arxiv.org/abs/2607.16618) (with Amira Hijazi and Pascal Van Hentenryck) is on arXiv!
 * **Jul 2026** — Our paper [*Optimal Combinatorial Testing with Constraints: The Balancing Act*](https://arxiv.org/abs/2607.17083) (with Thiago Serra, Hunter Gehman, Sumit Dhar, Mikey Ferguson, John Hooker, and Marcel Schoppers) is on arXiv!
 * **Jun 2026** — The extended version of our order fulfillment work, [*Learning Optimization Proxies for Sequential Contextual Stochastic Programs*](https://arxiv.org/abs/2606.25362) (with Tinghan Ye, Shuaicheng Tong, Beste Basciftci, and Pascal Van Hentenryck), is on arXiv!

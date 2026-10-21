@@ -23,7 +23,7 @@ Research experience
   * End-to-end supply chain planning in the paper industry via column generation and Benders decomposition (arXiv:2607.16618)
   * Proxy Benders Decomposition: replacing Benders subproblem optimization with certified optimization proxies that generate provably valid cuts (arXiv:2606.07403)
   * Learning optimization proxies for sequential contextual stochastic programs (arXiv:2606.25362)
-  * Optimal Pareto-regret bounds for stochastic multi-objective multi-armed bandits (arXiv:2604.07096)
+  * Pareto-regret bounds for stochastic (arXiv:2604.07096) and adversarial (arXiv:2609.23092) multi-objective multi-armed bandits
   * Deep learning-driven contextual stochastic optimization for real-time order fulfillment (NeurIPS 2025 ML&times;OR Workshop)
 
 * **Honors Thesis**, Bucknell University (2024)

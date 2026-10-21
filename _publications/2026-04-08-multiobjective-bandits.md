@@ -11,4 +11,6 @@ citation: '<b>Changkun Guan</b>, Mengfan Xu. &quot;Are Stochastic Multi-objectiv
 
 Do multiple objectives make stochastic bandits fundamentally harder? This paper shows that Pareto regret scales inversely with the largest objective-wise suboptimality gap and matches classical single-objective regret performance. The proposed algorithm pairs confidence-bound estimators with a top-two racing mechanism, achieving O(log T / g&dagger;) Pareto regret with no dependence on the number of objectives, and matching lower bounds confirm optimality. Experiments on synthetic and real datasets show order-of-magnitude regret improvements, while also revealing a potential fairness–hardness tradeoff absent in single-objective settings.
 
+Our follow-up paper studies [adversarial multi-objective bandits](/publication/2026-adversarial-multiobjective-bandits/).
+
 [Paper on arXiv](https://arxiv.org/abs/2604.07096)
