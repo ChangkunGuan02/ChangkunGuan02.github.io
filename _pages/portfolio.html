@@ -15,15 +15,16 @@ redirect_from:
 
 <div class="research-venn-wrap">
   <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Research map: Optimization, Machine Learning, and their intersection">
-    <circle data-region="optimization" cx="260" cy="190" r="150" class="venn-circle venn-opt" tabindex="0" role="button" aria-pressed="false" aria-label="Show Optimization papers, including ML &times; OR"/>
-    <circle data-region="ml" cx="440" cy="190" r="150" class="venn-circle venn-ml" tabindex="0" role="button" aria-pressed="false" aria-label="Show Machine Learning papers, including ML &times; OR"/>
+    <circle data-region="optimization" cx="260" cy="190" r="150" class="venn-circle venn-opt" tabindex="0" role="button" aria-pressed="false" aria-label="Show Optimization papers"/>
+    <circle data-region="ml" cx="440" cy="190" r="150" class="venn-circle venn-ml" tabindex="0" role="button" aria-pressed="false" aria-label="Show Machine Learning papers"/>
+    <path d="M350,70 A150,150 0 0,1 350,310 A150,150 0 0,1 350,70 Z" class="venn-lens-mask" pointer-events="none" aria-hidden="true"/>
     <path data-region="mlxopt" d="M350,70 A150,150 0 0,1 350,310 A150,150 0 0,1 350,70 Z" class="venn-lens" tabindex="0" role="button" aria-pressed="false" aria-label="Show ML &times; OR papers"/>
     <text x="185" y="197" class="venn-label" pointer-events="none">Optimization</text>
     <text x="515" y="186" class="venn-label" pointer-events="none">Machine</text>
     <text x="515" y="208" class="venn-label" pointer-events="none">Learning</text>
     <text x="350" y="197" class="venn-label venn-label-mix" pointer-events="none">ML &times; OR</text>
   </svg>
-  <p class="venn-hint" id="venn-hint">Hover a region &mdash; or tap on mobile &mdash; to light up the papers below, and click to pin it. ML &times; OR papers belong to both fields.</p>
+  <p class="venn-hint" id="venn-hint">Hover a region &mdash; or tap on mobile &mdash; to light up the papers below, and click to pin it.</p>
   <p class="venn-status" id="venn-status" aria-live="polite" hidden><span id="venn-status-text"></span> <button type="button" class="venn-clear" id="venn-clear" hidden>Show all</button></p>
 </div>
 
@@ -65,7 +66,9 @@ svg.has-active .venn-circle, svg.has-active .venn-lens { fill-opacity: 0.05; }
 svg.has-active .region-active.venn-opt  { fill-opacity: 0.30; stroke-width: 3.5; }
 svg.has-active .region-active.venn-ml   { fill-opacity: 0.30; stroke-width: 3.5; }
 svg.has-active .region-active.venn-lens { fill-opacity: 0.55; stroke-width: 3.5; animation: none; }
-svg.has-active .region-subactive.venn-lens { fill-opacity: 0.38; stroke-width: 2.5; animation: none; }
+.venn-lens-mask { fill: #fff; opacity: 0; transition: opacity 0.35s ease; }
+svg.has-active .venn-lens-mask { opacity: 1; }
+svg.has-active .venn-lens { animation: none; }
 
 .venn-label { font-size: 21px; font-weight: 700; fill: #003057; text-anchor: middle;
               font-family: inherit; }
@@ -117,18 +120,17 @@ svg.has-active .region-subactive.venn-lens { fill-opacity: 0.38; stroke-width: 2
   var status = document.getElementById('venn-status');
   var statusText = document.getElementById('venn-status-text');
   var clearBtn = document.getElementById('venn-clear');
-  var LABELS = { optimization: 'Showing Optimization papers, including ML \u00d7 OR.',
-                 ml: 'Showing Machine Learning papers, including ML \u00d7 OR.',
+  var LABELS = { optimization: 'Showing Optimization papers.',
+                 ml: 'Showing Machine Learning papers.',
                  mlxopt: 'Showing ML \u00d7 OR papers.' };
   var pinned = null;
 
-  /* ML x OR is a subset of both parents: activating a parent field also
-     includes the intersection papers (and partially lights the lens).
+  /* Regions are exclusive: Optimization and Machine Learning mean the outer
+     crescents only, and ML x OR is the middle. Each card matches one region.
      NOTE: no double-slash comments in inline JS on this site - compress_html
      collapses the page to one line and they would comment out the script. */
   function matches(cardArea, region) {
-    if (cardArea === region) return true;
-    return cardArea === 'mlxopt' && (region === 'optimization' || region === 'ml');
+    return cardArea === region;
   }
 
   function setArea(area) {
@@ -137,7 +139,6 @@ svg.has-active .region-subactive.venn-lens { fill-opacity: 0.38; stroke-width: 2
     regions.forEach(function (r) {
       var name = r.getAttribute('data-region');
       r.classList.toggle('region-active', name === area);
-      r.classList.toggle('region-subactive', !!area && name !== area && matches(name, area));
     });
     cards.forEach(function (c) {
       c.classList.toggle('card-active', !!area && matches(c.getAttribute('data-area'), area));
