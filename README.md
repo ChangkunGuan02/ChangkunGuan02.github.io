@@ -13,8 +13,8 @@ Live at [changkunguan02.github.io](https://changkunguan02.github.io), built with
 | Research projects | `_portfolio/*.md` |
 | Talks | `_talks/*.md` |
 | Teaching | `_teaching/*.md` |
-| CV (web) | `_pages/cv.md` |
-| CV (PDF) | `files/cv.pdf` |
+| CV (web and PDF content) | `_includes/cv-body.html` |
+| CV (PDF) | `files/cv.pdf`, rebuilt with `python3 _cv/build_pdf.py` |
 | Sidebar profile & links | `author:` section of `_config.yml` |
 | Navigation | `_data/navigation.yml` |
 
