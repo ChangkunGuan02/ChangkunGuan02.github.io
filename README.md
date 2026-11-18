@@ -18,7 +18,7 @@ Live at [changkunguan02.github.io](https://changkunguan02.github.io), built with
 | Sidebar profile & links | `author:` section of `_config.yml` |
 | Navigation | `_data/navigation.yml` |
 
-To replace the placeholder monogram avatar with a photo: add `images/profile.jpg` and set `avatar: "profile.jpg"` in `_config.yml`.
+To change the profile photo: add it to `images/` and update `avatar` and `og_image` in `_config.yml`.
 
 ## Local development
 
