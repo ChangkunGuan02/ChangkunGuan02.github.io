@@ -20,9 +20,20 @@
         var flips = document.querySelectorAll('.avatar-flip');
         Array.prototype.forEach.call(flips, function (el) {
           var turns = 0;
-          el.addEventListener('mouseenter', function () {
+          var touched = false;
+          function flip() {
             turns += 1;
             el.style.transform = 'rotateY(' + (turns * 180) + 'deg)';
+          }
+          el.addEventListener('pointerenter', function (e) {
+            if (e.pointerType === 'mouse') { flip(); }
+          });
+          el.addEventListener('pointerdown', function (e) {
+            touched = e.pointerType !== 'mouse';
+          });
+          el.addEventListener('click', function () {
+            if (touched) { flip(); }
+            touched = false;
           });
         });
       })();

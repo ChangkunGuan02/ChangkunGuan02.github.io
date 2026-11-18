@@ -167,8 +167,9 @@ h1, h2, h3, h4 {
   color: $gt-navy;
   background: rgba(179, 163, 105, 0.18);
   border: 1px solid $gt-gold;
-  border-radius: 999px;
-  white-space: nowrap;
+  border-radius: 1em;
+  max-width: 100%;
+  box-sizing: border-box;
 
   i { color: #8a7a45; }
 }
